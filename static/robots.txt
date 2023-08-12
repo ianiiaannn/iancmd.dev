@@ -1,0 +1,8 @@
+User-agent: Mediapartners-Google
+Disallow: 
+
+User-agent: *
+Disallow: /tags
+Allow: /
+
+Sitemap: https://www.iancmd.dev/sitemap.xml

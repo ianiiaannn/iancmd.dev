@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC);
+
+body {
+  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+  font-weight: 500;
+}
+
+@media (min-width: 48em) {
+  .content {
+    max-width: 38rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .content {
+    max-width: 58rem;
+  }
+}
+
+body.dark-theme {
+  --list-color: #cdcdcd !important;
+}
+
+h2>a>h2 {
+  color: #eee !important;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

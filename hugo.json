@@ -1,0 +1,31 @@
+{
+  "baseURL": "https://iancmd.dev/",
+  "languageCode": "zh-Hant",
+  "title": "Ian 的指令星球",
+  "theme": "poison",
+  "enableRobotsTXT": true,
+  "timeZone": "Asia/Taipei",
+  "hasCJKLanguage": true,
+  "markup": {
+    "safeMode": true,
+    "highlight": {
+      "tabWidth": 2,
+      "style": "onedark",
+      "lineNos": false,
+      "guessSyntax": true
+    },
+    "tableOfContents": {
+      "startLevel": 2,
+      "endLevel": 4,
+      "ordered": false
+    }
+  },
+  "params": {
+    "brand": "Ian 的指令星球",
+    "brand_image": "/profile.webp",
+    "dark_mode": true,
+    "utteranc": "ianiiaannn/iancmd.dev",
+    "gtag": "G-QSNCX5Z8MF",
+    "adsense": "ca-pub-3156472131130250"
+  }
+}
