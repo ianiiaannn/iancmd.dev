@@ -3,7 +3,7 @@ name: Deploy Hugo site to Pages
 on:
   push:
     branches:
-      - main
+      - master
 
   workflow_dispatch:
 
@@ -43,9 +43,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo \
-            --gc \
-            --minify \"          
+          hugo --gc --minify
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

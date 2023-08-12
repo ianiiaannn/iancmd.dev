@@ -42,9 +42,9 @@ Minecraft 是一個可玩性無限的遊戲。獨樂樂不如眾樂樂，為了�
 
 自架伺服器需要自行安裝 Java 執行環境（Java Runtime Environment），不像官方啟動器會自帶。64 位元電腦選擇 x64 版本，否則伺服器無法被分配到大於 4 GB 的記憶體。  
 
-* 1.16.5 以下版本：[Java 8](https://adoptium.net/temurin/releases/?version=8)
-* 1.17 到 1.17.1：[Java 16](https://adoptium.net/temurin/releases/?version=16)
 * 1.18 以上：[Java 17](https://adoptium.net/temurin/releases/?version=17)
+* 1.17 到 1.17.1：[Java 16](https://adoptium.net/temurin/releases/?version=16)
+* 1.16.5 以下版本：[Java 8](https://adoptium.net/temurin/releases/?version=8)
 
 ### 伺服器檔案下載
 
