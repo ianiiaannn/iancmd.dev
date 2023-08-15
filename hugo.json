@@ -6,6 +6,7 @@
   "enableRobotsTXT": true,
   "timeZone": "Asia/Taipei",
   "hasCJKLanguage": true,
+  "enableGitInfo": true,
   "markup": {
     "safeMode": true,
     "highlight": {
@@ -20,12 +21,28 @@
       "ordered": false
     }
   },
+  "frontmatter": {
+    "lastmod": [
+      ":fileModTime",
+      ":git"
+    ],
+    "publishDate": [
+      "date",
+      "Date"
+    ],
+    "date": [
+      "date",
+      "Date"
+    ]
+  },
   "params": {
     "brand": "Ian 的指令星球",
     "brand_image": "/profile.webp",
     "dark_mode": true,
     "utteranc": "ianiiaannn/iancmd.dev",
     "gtag": "G-QSNCX5Z8MF",
-    "adsense": "ca-pub-3156472131130250"
+    "adsense": "ca-pub-3156472131130250",
+    "github": "ianiiaannn",
+    "github_url": "https://github.com/ianiiaannn"
   }
 }

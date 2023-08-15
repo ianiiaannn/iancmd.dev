@@ -1,15 +1,15 @@
 {
-  "title": "",
-  "description": "",
-  "tags": [
+  "Title": "",
+  "Description": "",
+  "Tags": [
     "",
   ],
-  "categories": [
+  "Categories": [
     "",
   ],
-  "date": "",
-  "menu": "main",
-  "aliases": [
+  "Date": "0000-00-00 00:00:00.000000000 +0800 CST",
+  "Menu": "main",
+  "Aliases": [
     ""
   ]
 }

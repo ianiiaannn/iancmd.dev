@@ -7,7 +7,7 @@
   "categories": [
     "Minecraft"
   ],
-  "date": "2023-08-11",
+  "date": "2023-08-11 00:00:00.000000000 +0800 CST",
   "menu": "main",
   "aliases": [
     "/2019/05/minecraftjavaserver.html"
