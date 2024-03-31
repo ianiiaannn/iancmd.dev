@@ -416,7 +416,7 @@ ifconfig
 
 ## 管理
 
-這邊只列出一些常用或是在單人下沒有的指令，更多指令請參考 [Minecraft Wiki](https://minecraft.fandom.com/zh/wiki/%E6%8C%87%E4%BB%A4?variant=zh-tw)。
+這邊只列出一些常用或是在單人下沒有的指令，更多指令請參考 [Minecraft Wiki](https://zh.minecraft.wiki/w/%E5%91%BD%E4%BB%A4#%E5%91%BD%E4%BB%A4%E5%88%97%E8%A1%A8%E5%8F%8A%E5%85%B6%E6%A6%82%E8%BF%B0)。
 
 ```mcfunction
 op <玩家> # 給予玩家 OP 權限

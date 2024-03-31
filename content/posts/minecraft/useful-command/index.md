@@ -32,7 +32,7 @@
 * `(a|b)` 必須二選一
 * `[a|b]` 可選擇其中一個或是都不用
 * `#` 後面的文字為註解，不須輸入
-* `@` 為[選擇器](https://minecraft.fandom.com/zh/wiki/目標選擇器?variant=zh-tw)，可以替代大多數指令中玩家欄位
+* `@` 為[選擇器](https://zh.minecraft.wiki/w/%E5%91%BD%E4%BB%A4#%E7%9B%AE%E6%A0%87%E9%80%89%E6%8B%A9%E5%99%A8)，可以替代大多數指令中玩家欄位
   * `@p` 選擇最近的玩家
   * `@a` 選擇所有玩家
   * `@r` 選擇隨機玩家
@@ -61,7 +61,7 @@
 /gamerule playersSleepingPercentage 0 # 只需一個玩家睡覺即可跳過夜晚
 ```
 
-完整的遊戲規則可在 [Minecraft Wiki](https://minecraft.fandom.com/zh/wiki/遊戲規則?variant=zh-tw) 中找到
+完整的遊戲規則可在 [Minecraft Wiki](https://zh.minecraft.wiki/w/%E6%B8%B8%E6%88%8F%E8%A7%84%E5%88%99) 中找到
 
 ### 玩家控制（ban、op、kick）
 
@@ -119,7 +119,7 @@
 /locate structure endcity # 終界城  
 ```
 
-更多結構可在 [Minecraft Wiki](https://minecraft-zh.gamepedia.com/index.php?title=%E5%91%BD%E4%BB%A4/locate&variant=zh-tw) 中找到
+更多結構可在 [Minecraft Wiki](https://zh.minecraft.wiki/w/%E7%94%9F%E6%88%90%E7%BB%93%E6%9E%84?variant=zh-tw#%E5%8F%AF%E8%A2%AB%E5%AE%9A%E4%BD%8D%E7%9A%84%E7%BB%93%E6%9E%84) 中找到
 
 ### 經驗值
 
