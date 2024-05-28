@@ -1,0 +1,8 @@
+services:
+  hugo:
+    build: .
+    ports: 1313:1313
+    volumes: 
+      - content:content
+      - static:static
+      - assets:assets
