@@ -1,8 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC);
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2)
+      format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff)
+      format('woff'),
+    url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf)
+      format('opentype');
+}
 
 body {
-  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
-  font-weight: 500;
+  font-family: 'Noto Sans TC';
 }
 
 @media (min-width: 48em) {
@@ -21,7 +30,7 @@ body.dark-theme {
   --list-color: #cdcdcd !important;
 }
 
-h2>a>h2 {
+h2 > a > h2 {
   color: #eee !important;
 }
 
@@ -29,4 +38,21 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.article-toc nav {
+  margin-left: 0px !important;
+}
+
+details {
+  margin-bottom: 20px;
+}
+h2 {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 25px;
 }

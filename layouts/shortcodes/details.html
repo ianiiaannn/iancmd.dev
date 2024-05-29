@@ -1,0 +1,7 @@
+{{ .Scratch.Set "summary" (sub (.Params | len) 1) }}
+<details {{ if .Get 0 | eq "open" }} open {{ end }}>
+  <summary>
+    {{ .Get (.Scratch.Get "summary") | markdownify }}
+  </summary>
+  {{ .Inner | markdownify }}
+</details>

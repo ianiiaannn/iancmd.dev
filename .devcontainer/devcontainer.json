@@ -1,0 +1,23 @@
+{
+	"name": "Dockerfile",
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile",
+		"options": [
+			"--network",
+			"host"
+		]
+	},
+	"features": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"DavidAnson.vscode-markdownlint"
+			]
+		}
+	},
+	"forwardPorts": [
+		"1313:1313"
+	]
+}

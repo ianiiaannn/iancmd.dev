@@ -1,11 +1,13 @@
 FROM ubuntu
 
-RUN apt update && apt install snapd build-essential
-RUN snap install hugo
-COPY . /workspaces/hugo
+RUN apt update && apt install wget build-essential ffmpeg git -y
 
-WORKDIR /workspaces/hugo/themes/poison
-RUN git pull
+ENV HUGO_VERSION="0.126.1"
+
+RUN wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+RUN dpkg -i /tmp/hugo.deb
+
+COPY . /workspaces/hugo
 
 WORKDIR /workspaces/hugo/
 
