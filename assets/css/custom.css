@@ -1,37 +1,29 @@
-@font-face {
-  font-family: 'Noto Sans TC';
-  font-style: normal;
+body {
+  font-family: 'Nunito', 'Noto Sans TC';
+  font-optical-sizing: auto;
   font-weight: 400;
-  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2)
-      format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff)
-      format('woff'),
-    url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf)
-      format('opentype');
+  font-style: normal;
 }
 
-body {
-  font-family: 'Noto Sans TC';
+code {
+  font-family: 'Azeret Mono', 'Noto Sans TC', monospace;
 }
+
 
 @media (min-width: 48em) {
   .content {
-    max-width: 38rem;
+    max-width: 38em;
   }
 }
 
 @media (min-width: 64em) {
   .content {
-    max-width: 58rem;
+    max-width: 58em;
   }
 }
 
-body.dark-theme {
-  --list-color: #cdcdcd !important;
-}
-
-h2 > a > h2 {
-  color: #eee !important;
+h2>a>h2 {
+  color: #eee;
 }
 
 img {
@@ -41,12 +33,13 @@ img {
 }
 
 .article-toc nav {
-  margin-left: 0px !important;
+  margin-left: 0px;
 }
 
 details {
   margin-bottom: 20px;
 }
+
 h2 {
   margin-top: 0px;
   margin-bottom: 30px;
@@ -55,4 +48,9 @@ h2 {
 h3 {
   margin-top: 0px;
   margin-bottom: 25px;
+}
+
+
+li {
+  color: inherit;
 }
