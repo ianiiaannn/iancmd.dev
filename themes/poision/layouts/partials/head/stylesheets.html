@@ -1,0 +1,14 @@
+{{ $css_bundle := slice
+(resources.Get "css/poole.css")
+(resources.Get "css/syntax.css")
+(resources.Get "css/hyde.css")
+(resources.Get "css/poison.css")
+(resources.Get "css/tabs.css")
+(resources.Get "css/custom.css")
+| resources.Concat "css/bundle.css" | minify | fingerprint }}
+
+<link type="text/css" rel="stylesheet" href="{{ $css_bundle.RelPermalink }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Noto+Sans+TC&family=Nunito&display=swap"
+  rel="stylesheet">

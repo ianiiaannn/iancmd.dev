@@ -1,0 +1,16 @@
+{{ define "main" -}}
+<h1 class="title">{{ .Title }}</h1>
+<ul class="entries">
+  {{ range .Pages.ByLastmod }}
+  <li>
+    <span class="title">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </span>
+    <span class="published">
+      Last Modified:
+      <time class="pull-right post-list">{{ .Lastmod | time.Format ":date_long" }}</time>
+    </span>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

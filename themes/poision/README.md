@@ -1,0 +1,10 @@
+- Removed
+  - KaTeX
+  - Mermaid
+  - remark42
+  - Fonts
+  - PlantUML
+- Added
+  - utteranc (\[$.Site.Params.utteranc\])
+  - Google Analytics (\[$.Site.Params.gtag\])
+  - Google Adsense (\[$.Site.Params.adsense\])

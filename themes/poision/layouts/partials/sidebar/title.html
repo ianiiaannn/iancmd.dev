@@ -1,0 +1,17 @@
+<div class="sidebar-about">
+  <h2 class="brand">
+    {{ if .Site.Params.brand_image }}
+    <a href="{{ .Site.BaseURL }}">
+      <img src="{{ default .Site.Params.brand_image .Params.brand_image }}" alt="brand image">
+    </a>
+    {{ end }}
+    {{ if .Site.Params.brand }}
+    <a href="{{ .Site.BaseURL }}">
+      <h2>{{ .Site.Params.brand }}</h2>
+    </a>
+    {{ end }}
+  </h2>
+  <p class="lead">
+    {{ with .Site.Params.description }}{{.}}{{end}}
+  </p>
+</div>
