@@ -1,6 +1,6 @@
 +++
 Title = "AIS3 2024 Pre-Exam Writeup"
-Date = "2024-05-27 00:00:00 +0800 CST"
+Date = "2024-07-01 00:00:00 +0800 CST"
 Description = ""
 Tags = ["CTF", "AIS3", "Writeup"]
 Categories = ["CTF"]
