@@ -98,6 +98,8 @@ Flag: `AIS3{LP#1742885: lxml no longer expands external entities (XXE) by defaul
 
 題目作者：[Chumy](https://blog.chummydns.com/)\
 題目難度：Medium\
+[原始碼](https://github.com/Jimmy01240397/My-CTF-Challenges/tree/master/AIS3-2024/capoost/chal)\
+[官方解](https://github.com/Jimmy01240397/My-CTF-Challenges/blob/master/AIS3-2024/capoost/chal/solve/expliot.py)\
 解題人數：8/328（我沒解開）
 
 #### 觀察
@@ -167,6 +169,8 @@ LFI 之後可以看到程式是 go 寫的，`bin/capoost` 太大不能抓下來�
 
 題目作者：[Ching367436](https://blog.ching367436.me/)\
 題目難度：Medium\
+[原始碼](https://github.com/Ching367436/My-CTF-Challenges/tree/main/ais3-pre-exam/2024/web/login-panel-revenge-revenge)\
+[官方解](https://github.com/Ching367436/My-CTF-Challenges/blob/main/ais3-pre-exam/2024/web/login-panel-revenge-revenge/exp/exp.py)\
 解題人數：4/328
 
 Ching367436 的系列作，這是第三題，前面有 [Login Panel](https://blog.ching367436.me/ais3-pre-exam-2023-write-up/#Login-Panel) 和 [Login Panel Revenge](https://github.com/Ching367436/My-CTF-Challenges/tree/main/tscctf/2024/web/login-panel-revenge) 兩題。
@@ -198,7 +202,7 @@ def image(request):
     return HttpResponse(data, content_type="image/png")
 ```
 
-這邊在讀取檔案時可以任意讀取任何 `/loginPanel` 下的檔案。
+這邊讀取圖片用的 endpoint 只要把路徑 Base64 Encode 就可以任意讀取任何 `/loginPanel` 下的檔案。
 
 ```python
 DATABASES = {
@@ -209,7 +213,7 @@ DATABASES = {
 }
 ```
 
-這邊可以發現 Diango 儲存 Session 的地方是 SQLite3 資料庫，把這個檔案抓下來，使用其他人的 Session 來嘗試登入直到遇到成功登入管理員帳號的 Session。另外，CSRF 網站上有我就順便寫上去了。
+這邊可以發現 Diango 儲存 Session 的地方是 SQLite3 資料庫，把這個檔案抓下來，在網路上找個 SQLite to JSON 轉換器，使用資料庫內其他使用者的 Session 來嘗試讀取 `/dashboard` 直到遇到已經登入管理員帳號的 Session。另外，網站上有 CSRF 我就順便寫上去了。
 
 ```typescript
 async function main() {
@@ -250,7 +254,7 @@ Flag: `AIS3{Yet_An0th3r_l0gin_pan3l_c2hbKnXIa_c!!!!!}`
 題目難度：Medium\
 解題人數：15/328（我沒解開）
 
-MySQL Time Based Blind Injection LFI
+題目要我們讀取 `/flag` 檔案，[MySQL Time Based Blind Injection](https://owasp.org/www-community/attacks/Blind_SQL_Injectio) [LFI](https://dev.mysql.com/doc/refman/8.4/en/string-functions.html#function_load-file)。
 
 ```typescript
 async function main() {
@@ -288,7 +292,7 @@ async function timeout() {
 void main()
 ```
 
-輸出：`AIS3{CRYCHIC_Funeral_` 後面壞掉了
+輸出：`AIS3{CRYCHIC_Funeral_` 後面壞掉了，[事後](https://hackmd.io/@maple3142/rkJDrcHNA#Its-MyGO)（🍁🛐）看是一堆 Emoji 我的 Encoding 沒有處理好。
 
 ### It's MyGO!!! Part-time Worker
 
@@ -459,9 +463,10 @@ Flag: `AIS3{You_are_the_master_of_time_management!!!!?}`
 
 題目作者：[Ching367436](https://blog.ching367436.me/)\
 解題人數：3/328\
+[原始碼](https://github.com/Ching367436/My-CTF-Challenges/tree/main/ais3-pre-exam/2024/rev/javascript-flag-checker)\
 bau bau
 
-這題是一個 Flag Checker，輸入 Flag 並按下按鈕後會跟後端檢查 Flag 是否正確。使用 Burp Suite 可以抓到 3.2 MB 的 `dope.js`，看起來是前端的控制程式碼。打開閱讀後，可以發現這個是被嚴重混淆的 Vue.js 程式碼（為甚麼會有加密貨幣錢包 Library？），由於題目分類是逆向，正確的 Flag 應該會藏在這個檔案中。
+這題是一個 Flag Checker，輸入 Flag 並按下按鈕後會跟後端檢查 Flag 是否正確。使用 Burp Suite 可以抓到 3.2 MB 的 [`dope.js`](https://raw.githubusercontent.com/Ching367436/My-CTF-Challenges/main/ais3-pre-exam/2024/rev/javascript-flag-checker/deploy/web/static/dope.js)，看起來是前端的控制程式碼。打開閱讀後，可以發現這個是被嚴重混淆的 Vue.js 程式碼（為甚麼會有加密貨幣錢包 Library？），由於題目分類是逆向，正確的 Flag 應該會藏在這個檔案中。
 
 經過觀察，這段程式有三個主要的替換函數 `AIS3()` 、 `_0x3d32()` 和 `Ching367436()`，前兩個函數的作用是輸入一個數字並替換成字串；而 `Ching367436` 則是計算機，對輸入的兩個數字或字串進行加減乘除或位元運算，並由 `__p_2651934416` 控制所使用的運算子（或是使用 `__p_4879216376()` 指定 `__p_2651934416` 的內容），其中 `__p_2651934416 = -7` 代表使用加法運算子（對 JavaScript 來說也可以代表字串拼接），在程式中大量出現。
 
