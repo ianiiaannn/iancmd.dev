@@ -23,8 +23,7 @@
   },
   "frontmatter": {
     "lastmod": [
-      ":git",
-      ":fileModTime"
+      ":git"
     ],
     "publishDate": [
       "date",

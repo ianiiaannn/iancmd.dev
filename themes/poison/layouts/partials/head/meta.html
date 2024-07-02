@@ -1,4 +1,25 @@
-{{ template "_internal/opengraph.html" . }}
+{{ if eq .Kind "home" }}
+{{ .Scratch.Set "title" $.Site.Params.brand }}
+{{ .Scratch.Set "description" .Site.Params.Description }}
+{{ else }}
+{{ .Scratch.Set "description" .Description }}
+{{ end }}
+
+{{ if .IsSection }}
+{{ .Scratch.Add "title" .Title }}
+{{ .Scratch.Add "title" " - " }}
+{{ .Scratch.Add "title" ($.Site.Params.brand | humanize | title) }}
+{{ end }}
+
+{{ if .IsPage }}
+{{ .Scratch.Add "title" .Title }}
+{{ .Scratch.Add "title" " - " }}
+{{ .Scratch.Add "title" ($.Site.Params.brand | humanize | title) }}
+{{ end }}
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='{{ "sitemap.xml" | absURL }}' />
+
+<title itemprop="name">{{ .Scratch.Get "title" }}</title>
 {{ template "_internal/twitter_cards.html" . }}
 {{ template "_internal/schema.html" . }}
 
