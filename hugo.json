@@ -1,7 +1,7 @@
 {
   "baseURL": "https://iancmd.dev/",
   "languageCode": "zh-Hant",
-  "title": "Ian 的指令星球",
+  "title": "ianiiaannn's Blog",
   "theme": "poison",
   "enableRobotsTXT": true,
   "timeZone": "Asia/Taipei",
@@ -35,7 +35,7 @@
     ]
   },
   "params": {
-    "brand": "Ian 的指令星球",
+    "brand": "ianiiaannn's Blog",
     "brand_image": "/profile.webp",
     "dark_mode": true,
     "utteranc": "ianiiaannn/iancmd.dev",
