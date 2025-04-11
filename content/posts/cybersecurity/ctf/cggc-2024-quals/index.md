@@ -5,6 +5,7 @@ Description = ""
 Tags = ["CTF", "Writeup"]
 Categories = ["CTF"]
 menu = "main"
+aliases = ["/posts/ctf/cggc-2024-quals"]
 +++
 
 這次和 \_Viεcon\_、Andy Lu 和 [Darrin Lin](https://darrin.cc/) 組隊參加國科會舉辦的 [2024 CGGC 網路守護者挑戰賽](https://cggc.nchc.org.tw/)。
@@ -266,7 +267,7 @@ Got message: /CGGC{breakpoint_is_a_biiiig_gadget_oj237rpwd3i2}
 Executed shell command: /z. Response: 500
 ```
 
-由於我們沒有下指令離開 pdb，pdb 發現沒指令了會崩潰，HTTP Reponse 500 正常。
+由於我們沒有下指令離開 pdb，pdb 發現沒指令了會崩潰，導致收到的 HTTP Reponse Code 是 500。
 
 這組 Payload 的 Prefix 50 字元，Suffix 6 字元，理論上能縮短成：
 

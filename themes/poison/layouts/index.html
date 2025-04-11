@@ -3,7 +3,7 @@
   {{ range (.Paginate (where .Site.RegularPages "Type" "posts")).Pages }}
   <article class="post">
     {{ partial "post/info.html" . }}
-    {{ .Summary }}
+    {{ .Summary | plainify | truncate .Site.Params.summaryLength }}
     {{ if .Truncated }}
     <div class="read-more-link">
       <a href="{{ .RelPermalink }}">Read More…</a>
