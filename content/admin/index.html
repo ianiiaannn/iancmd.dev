@@ -1,0 +1,78 @@
+<form id="login">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <br>
+  <button type="submit">Submit</button>
+</form>
+
+<form id="shell" hidden>
+  <label for="command">Command:</label>
+  <input type="text" id="command" name="command" required>
+  <button type="submit">Execute</button>
+</form>
+<pre id="result" hidden></pre>
+
+<style>
+  [hidden] {
+    display: none;
+  }
+</style>
+
+<script>
+  const loginForm = document.getElementById('login');
+  const shellForm = document.getElementById('shell');
+  const result = document.getElementById('result');
+  loginForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    loginForm.hidden = true;
+    shellForm.hidden = false;
+  });
+  shellForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    result.hidden = false;
+    const command = document.getElementById('command').value;
+    console.log(command)
+    switch (command) {
+      case 'id':
+        result.textContent = 'uid=0(root) gid=0(root) groups=0(root)';
+        break;
+      case 'whoami':
+        result.textContent = 'root';
+        break;
+      case 'pwd':
+        result.textContent = '/root';
+        break;
+      case 'uname':
+        result.textContent = 'Linux';
+        break;
+      case 'uname -a':
+        result.textContent = `Linux iancmd.dev 9.140.3-arch1-1 #1 SMP PREEMPT_DYNAMIC ${new Date()} x86_64 GNU/Linux`
+        break;
+      case 'cat /etc/passwd':
+        result.textContent = `root:x:0:0:root:/root:/bin/bash`;
+        break;
+      case 'cat /etc/shadow':
+        result.textContent = `root:!:0:0:0:0:::\n`;
+        break;
+      case 'ls':
+        result.textContent = 'flag.txt\n';
+        break;
+      case 'cat /root/flag.txt':
+      case 'cat flag.txt':
+        // Serverless deployment doesn't allow me to send a HTTP response code, so we redirect user to http.cat :)
+        window.location.href = 'https://http.cat/status/402'
+        result.textContent = 'Still no flag :)'
+        break;
+      default:
+        if (command.includes('/dev/tcp' || '/dev/udp'))
+          result.textContent = 'Bad hacker :(';
+        else if (command.includes('alert'))
+          alert(document.domain)
+        else
+          result.textContent = `zsh: command not found: ${command}`;
+    }
+  })
+</script>
