@@ -1,9 +1,15 @@
+<title>R3AL ADMIN PANEL!!!!!</title>
+<h1>Admin Panel</h1>
+
+<p>Welcome to the admin panel. Please log in to access the shell.</p>
+<p></p>
+
 <form id="login">
   <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required>
+  <input type="text" id="username" name="username">
   <br>
   <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required>
+  <input type="password" id="password" name="password">
   <br>
   <button type="submit">Submit</button>
 </form>
@@ -22,6 +28,14 @@
 </style>
 
 <script>
+  window.onload = function () {
+    try {
+      document.getElementsByClassName('info')[0].style.display = 'none';
+      document.getElementsByTagName('title')[0].innerText = 'R3AL ADMIN PANEL!!!!!';
+    }
+    catch {
+    }
+  }
   const loginForm = document.getElementById('login');
   const shellForm = document.getElementById('shell');
   const result = document.getElementById('result');
@@ -49,16 +63,22 @@
         result.textContent = 'Linux';
         break;
       case 'uname -a':
-        result.textContent = `Linux iancmd.dev 9.140.3-arch1-1 #1 SMP PREEMPT_DYNAMIC ${new Date()} x86_64 GNU/Linux`
+        result.textContent = `Linux iancmd.dev 9.420.6-arch1-1 #1 SMP PREEMPT_DYNAMIC ${new Date()} x86_64 GNU/Linux`
+        break;
+      case 'cat':
+        result.textContent = '🐱'
+        break;
+      case 'dog':
+        result.textContent = '🐶'
         break;
       case 'cat /etc/passwd':
         result.textContent = `root:x:0:0:root:/root:/bin/bash`;
         break;
       case 'cat /etc/shadow':
-        result.textContent = `root:!:0:0:0:0:::\n`;
+        result.textContent = `root:!:0:0:0:0:::`;
         break;
       case 'ls':
-        result.textContent = 'flag.txt\n';
+        result.textContent = 'flag.txt';
         break;
       case 'cat /root/flag.txt':
       case 'cat flag.txt':
@@ -66,6 +86,9 @@
         window.location.href = 'https://http.cat/status/402'
         result.textContent = 'Still no flag :)'
         break;
+      case '':
+        window.location.href = 'https://http.cat/status/402'
+        result.textContent = 'That\'s neat!'
       default:
         if (command.includes('/dev/tcp' || '/dev/udp'))
           result.textContent = 'Bad hacker :(';
