@@ -1,0 +1,11 @@
+<article class="post">
+    {{ with .GetPage "about" }}
+    <a href="{{ .RelPermalink }}">
+        <h1>{{ .Title }}</h1>
+    </a>
+    {{ .Summary }}
+    <div class="read-more-link">
+        <a href="{{ .RelPermalink }}">Read More…</a>
+    </div>
+    {{ end }}
+</article>

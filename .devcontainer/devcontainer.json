@@ -13,7 +13,8 @@
 		"vscode": {
 			"extensions": [
 				"GitHub.copilot",
-				"DavidAnson.vscode-markdownlint"
+				"DavidAnson.vscode-markdownlint",
+				"streetsidesoftware.code-spell-checker"
 			]
 		}
 	},

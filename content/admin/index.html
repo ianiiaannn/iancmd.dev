@@ -1,4 +1,3 @@
-<title>R3AL ADMIN PANEL!!!!!</title>
 <h1>Admin Panel</h1>
 
 <p>Welcome to the admin panel. Please log in to access the shell.</p>
@@ -89,8 +88,9 @@
       case '':
         window.location.href = 'https://http.cat/status/402'
         result.textContent = 'That\'s neat!'
+        break;
       default:
-        if (command.includes('/dev/tcp' || '/dev/udp'))
+        if (command.includes('/dev/tcp') || command.includes('/dev/udp'))
           result.textContent = 'Bad hacker :(';
         else if (command.includes('alert'))
           alert(document.domain)

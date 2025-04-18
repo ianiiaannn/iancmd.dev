@@ -3,7 +3,7 @@
   "languageCode": "zh-Hant",
   "title": "ianiiaannn's Blog",
   "theme": "poison",
-  "enableRobotsTXT": true,
+  "enableRobotsTXT": false,
   "timeZone": "Asia/Taipei",
   "hasCJKLanguage": true,
   "enableGitInfo": true,

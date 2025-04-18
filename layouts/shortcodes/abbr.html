@@ -1,0 +1,4 @@
+{{ .Scratch.Set "abbr" (sub (.Params | len) 1) }}
+<abbr title="{{ .Get 0 }}">
+  {{ .Inner | markdownify }}
+</abbr>

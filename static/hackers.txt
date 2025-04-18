@@ -1,0 +1,1 @@
+Try `/admin` for web shell!

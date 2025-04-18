@@ -37,8 +37,8 @@
 
 * {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -52,6 +52,7 @@ html {
   font-size: 16px;
   line-height: 1.5;
 }
+
 @media (min-width: 38em) {
   html {
     font-size: 20px;
@@ -61,7 +62,7 @@ html {
 body {
   color: #515151;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 /* No `:visited` state is required by default (browsers will use `a`) */
@@ -69,6 +70,7 @@ a {
   color: var(--link-color);
   text-decoration: none;
 }
+
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
@@ -76,25 +78,36 @@ a:focus {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: .5rem;
   font-weight: 400;
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
 }
+
 h1 {
   font-size: 2rem;
 }
+
 h2 {
   margin-top: 1rem;
   font-size: 1.5rem;
 }
+
 h3 {
   margin-top: 1.5rem;
   font-size: 1.25rem;
 }
-h4, h5, h6 {
+
+h4,
+h5,
+h6 {
   margin-top: 1rem;
   font-size: 1rem;
 }
@@ -111,7 +124,9 @@ strong {
 
 
 /* Lists */
-ul, ol, dl {
+ul,
+ol,
+dl {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -119,6 +134,7 @@ ul, ol, dl {
 dt {
   font-weight: bold;
 }
+
 dd {
   margin-bottom: .5rem;
 }
@@ -132,22 +148,12 @@ hr {
   border-bottom: 1px solid #fff;
 }
 
-abbr {
-  font-size: 85%;
-  font-weight: bold;
-  color: #555;
-  text-transform: uppercase;
-}
-abbr[title] {
-  cursor: help;
-  border-bottom: 1px dotted #e5e5e5;
-}
-
 /* Code */
 code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
+
 code {
   padding: .25em .5em;
   font-size: 85%;
@@ -155,6 +161,7 @@ code {
   background-color: #f9f9f9;
   border-radius: 3px;
 }
+
 pre {
   display: block;
   margin-top: 0;
@@ -168,16 +175,19 @@ pre {
   word-wrap: break-word;
   background-color: #f9f9f9;
 }
+
 pre code {
   padding: 0;
   font-size: 100%;
   color: inherit;
   background-color: transparent;
 }
+
 .highlight {
   margin-bottom: 1rem;
   border-radius: 4px;
 }
+
 .highlight pre {
   margin-bottom: 0;
 }
@@ -189,14 +199,17 @@ blockquote {
   color: #7a7a7a;
   border-left: .25rem solid #e5e5e5;
 }
+
 blockquote p:last-child {
   margin-bottom: 0;
 }
+
 @media (min-width: 30em) {
   blockquote {
     padding-right: 5rem;
     padding-left: 1.25rem;
   }
+
   .container {
     margin-right: auto;
   }
@@ -245,9 +258,9 @@ img {
 
 .container {
   max-width: 38rem;
-  padding-left:  1rem;
+  padding-left: 1rem;
   padding-right: 1rem;
-/*  margin-left:  auto;*/
+  /*  margin-left:  auto;*/
 }
 
 
@@ -258,18 +271,21 @@ img {
  */
 
 .masthead {
-  padding-top:    1rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
 }
+
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
 }
+
 .masthead-title a {
   color: #505050;
 }
+
 .masthead-title small {
   font-size: 75%;
   font-weight: 400;
@@ -296,6 +312,7 @@ img {
 .post-title a {
   color: #303030;
 }
+
 .page-title,
 .post-title {
   margin-top: 0;
@@ -315,26 +332,32 @@ img {
   padding-bottom: 2rem;
   border-top: 1px solid #eee;
 }
+
 .related-posts {
   padding-left: 0;
   list-style: none;
 }
+
 .related-posts h3 {
   margin-top: 0;
 }
+
 .related-posts li small {
   font-size: 75%;
   color: #999;
 }
+
 .related-posts li a:hover {
   color: #268bd2;
   text-decoration: none;
 }
+
 .related-posts li a:hover small {
   color: inherit;
 }
+
 .comments {
-    margin-top: 3em;
+  margin-top: 3em;
 }
 
 
@@ -346,7 +369,8 @@ img {
  */
 
 .pagination {
-  overflow: hidden; /* clearfix */
+  overflow: hidden;
+  /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
@@ -360,6 +384,7 @@ img {
   padding: 1rem;
   border: 1px solid #eee;
 }
+
 .pagination-item:first-child {
   margin-bottom: -1px;
 }
@@ -373,18 +398,21 @@ a.pagination-item:hover {
   .pagination {
     margin: 3rem 0;
   }
+
   .pagination-item {
     float: left;
     width: 50%;
   }
+
   .pagination-item:first-child {
     margin-bottom: 0;
-    border-top-left-radius:    4px;
+    border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
   }
+
   .pagination-item:last-child {
     margin-left: -1px;
-    border-top-right-radius:    4px;
+    border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
   }
 }
