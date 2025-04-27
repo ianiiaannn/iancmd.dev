@@ -11,55 +11,56 @@ I use Arch btw.
 
 <!--more-->
 
+## Certification
+
+{{< row-of-badge >}}
+  {{< badge src="oswe-badge.webp" >}}
+{{< /row-of-badge >}}
+
+- [OffSec Web Expert (OSWE)](https://credentials.offsec.com/72ec9e9f-3e16-41b6-8ca1-cd4b80d30123) — Certification Date: 2025-04-07
+- [iPas 中級資訊安全工程師](https://www.ipas.org.tw/ISE/AbilityIndex.aspx) — Certification Date: 2024-07-31
+
 ## Projects
 
 - [NPTU CSIE Gomoku V2](https://gomoku.csie2.nptu.edu.tw/)
-  - A web-based online judge that focus on user-programmed gomoku (five-in-a-roll) algorithms.
+  - A web-based online judge that focuses on user-programmed gomoku (five-in-a-roll) algorithms.
   - Users can submit their own algorithms and run them against others.
-  - We host a tournament on this platform once a year.
-  - Built with Bun, SQLite, Prisma, Redis, BullMQ and Angular.
-  - One-click deployable with Docker.
-  - Fully automated GitLab CI/CD pipelines.
-  - Closed source.
-
-## Certification
-
-- [OffSec Web Expert (OSWE)](https://credentials.offsec.com/72ec9e9f-3e16-41b6-8ca1-cd4b80d30123) 2025-04-07
-- [iPas 中級資訊安全工程師](https://www.ipas.org.tw/ISE/AbilityIndex.aspx) 2024-07-31
+  - We host a tournament on this platform with over 100 participants annually.
+  - Built with Bun, SQLite, Prisma, Redis, BullMQ and Angular. It supports one-click deployment via Docker and features fully automated GitLab CI/CD pipelines.
+  - *(Project is closed-source.)*
 
 ## Education
 
-- [Department of Computer Science and Information Engineering, NPTU](https://csie.nptu.edu.tw/) 2023 - current
-  - [Computer Center of Department of Computer Science and Information Engineering](https://web.csie2.nptu.edu.tw/) - System Administrator
-    - Manages a large variety of services, including identify management, file storage, workstation and more.
-    - We have multiple machine with Proxmox Virtual Environment running CentOS/Ubuntu/Fedora QEMU Guests with Docker containers.
-    - Replaced legacy NIS with FreeIPA.
+- [National Pingtung University (NPTU) — B.S. Candidate, Computer Science and Information Engineering](https://csie.nptu.edu.tw/) (2023 — Present)
+  - [Computer Center of Department of Computer Science and Information Engineering](https://web.csie2.nptu.edu.tw/) — System Administrator
+    - Manages a large variety of services, including identity management, file storage, workstations and more.
+    - Maintains multiple machines with Proxmox VE hosting CentOS/Ubuntu/Fedora QEMU guests alongside Docker containers.
+    - Migrated legacy NIS authentication to FreeIPA for improved security.
   - [Real-Time and Embedded Systems Laboratory](https://resl.cise.nptu.edu.tw/)
-    - Assists developers in building secure softwares.
-    - Helps with Dockerize various services and building CI/CD pipelines.
-- [Taichung Municipal Taichung First Senior High School](https://tcfsh.tc.edu.tw/) 2020 - 2023
-  - [Computer Information Research Club](https://tcirc.tw/) - System Administrator
-    - Manages an online judge system written in Java and Tomcat.
-    - Windows Server VM Host + Ubuntu guest with LXC container.
+    - Assists developers in building secure software.
+    - Helps with dockerizing various services and writing CI/CD pipelines to enhance development workflows.
+- [Taichung Municipal Taichung First Senior High School](https://tcfsh.tc.edu.tw/) (2020 — 2023)
+  - [Computer Information Research Club](https://tcirc.tw/) — System Administrator
+    - Maintained an online judge system built with Java and Tomcat.
+    - Windows Server VM Host with Ubuntu guest and LXC container.
 
 ## Side Projects
 
-- [untitled_shell](https://github.com/ianiiaannn/untitled_shell)
-  - A simple shell written in C.
-  - Supports basic shell features like piping, redirection, and job control.
-  - Implements an abstract syntax tree (AST) for command parsing.
-  - Project written in Professor Wu's [Advanced Operating Systems](https://junwu.nptu.edu.tw/dokuwiki/doku.php?id=aos:start) course.
+- untitled_shell
+  - A simple Unix-like shell written in C, developed as a project for Professor Wu’s [Advanced Operating Systems](https://junwu.nptu.edu.tw/dokuwiki/doku.php?id=aos:start) course.
+  - Supports core features such as piping, I/O redirection, and job control, with an abstract syntax tree (AST)-based command parser.
+  - Source code available on [GitHub](https://github.com/ianiiaannn/untitled_shell).
 - This Blog
   - A personal blog built with [Hugo](https://gohugo.io/) and served by [Cloudflare Pages](https://pages.cloudflare.com/).
-  - Heavily customized theme (Go Templates) based on [poison](https://github.com/lukeorth/poison).
+  - Features heavily customized theme using Go Templates based on [poison](https://github.com/lukeorth/poison) theme.
   - Source code available on [GitHub](https://github.com/ianiiaannn/iancmd.dev/tree/master/themes/poison).
   
 ## Career
 
-None. Looking for cyber security related internship opportunities.
+Currently seeking internship opportunities in cyber security, with a focus on vulnerability research, web security and penetration testing. Passionate about identifying and analyzing security flaws, and eager to apply and expand my skills in real-world environments.
 
 ## Contact Information
 
-- Email: [ian@iancmd.dev](mailto:ian@iancmd.dev)
+- Feel free to reach out via email: [ian@iancmd.dev](mailto:ian@iancmd.dev)
 - GitHub: [ianiiaannn](https://github.com/ianiiaannn)
 - LinkedIn: [ianiiaannn](https://www.linkedin.com/in/ianiiaannn/)
