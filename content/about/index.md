@@ -3,7 +3,7 @@ Title = "About me"
 menu = "main"
 +++
 
-Hi, I'm Ian aka `ianiiaannn`. I am a student focused on white-box web application audit and Linux system administration.
+Hi, I'm Ian aka `ianiiaannn`, a web CTF player with OSWE. I also have some experience with Linux system administration and web application development.
 
 I'm currently a member of CTF team [734m_N4M3_h3r3](https://ctftime.org/team/301288) and [竹狐](https://ctftime.org/team/280959). I mainly focus on web, blockchain ~~and welcome~~ challenges.
 
@@ -17,8 +17,8 @@ I use Arch btw.
   {{< badge src="oswe-badge.webp" >}}
 {{< /row-of-badge >}}
 
-- [OffSec Web Expert (OSWE)](https://credentials.offsec.com/72ec9e9f-3e16-41b6-8ca1-cd4b80d30123) — Certification Date: 2025-04-07
-- [iPas 中級資訊安全工程師](https://www.ipas.org.tw/ISE/AbilityIndex.aspx) — Certification Date: 2024-07-31
+- [OffSec Web Expert (OSWE)](https://credentials.offsec.com/72ec9e9f-3e16-41b6-8ca1-cd4b80d30123) — April 2025
+- [iPas 中級資訊安全工程師](https://www.ipas.org.tw/ISE/AbilityIndex.aspx) — July 2024
 
 ## Projects
 
@@ -54,7 +54,15 @@ I use Arch btw.
   - A personal blog built with [Hugo](https://gohugo.io/) and served by [Cloudflare Pages](https://pages.cloudflare.com/).
   - Features heavily customized theme using Go Templates based on [poison](https://github.com/lukeorth/poison) theme.
   - Source code available on [GitHub](https://github.com/ianiiaannn/iancmd.dev/tree/master/themes/poison).
-  
+
+## Awards
+
+- [HITCON CTF 2024 Final](https://ctf2024.hitcon.org/) - Taiwan Star
+  - Participated as a member of Starburst Beef Stir-Fried BambooFox.
+  - Mainly focused on the defensive side of challenge ad-fulu.
+- AEGIS CTF 2024 - 7th Place
+  - Participated as a member of 734m_N4M3_h3r3.
+
 ## Career
 
 Currently seeking internship opportunities in cyber security, with a focus on vulnerability research, web security and penetration testing. Passionate about identifying and analyzing security flaws, and eager to apply and expand my skills in real-world environments.
