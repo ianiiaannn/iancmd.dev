@@ -27,10 +27,18 @@
 </style>
 
 <script>
+  function getRandomChar() {
+    const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    return chars[Math.floor(Math.random() * chars.length)];
+  }
+  const xssList = ['<scr', 'script:', 'onerror', 'onload', 'cookie', 'alert', 'iframe'];
   window.onload = function () {
     try {
       document.getElementsByClassName('info')[0].style.display = 'none';
       document.getElementsByTagName('title')[0].innerText = 'R3AL ADMIN PANEL!!!!!';
+      if (xssList.some((x) => window.location.search)) {
+        alert(document.domain);
+      }
     }
     catch {
     }
@@ -47,7 +55,6 @@
     event.preventDefault();
     result.hidden = false;
     const command = document.getElementById('command').value;
-    console.log(command)
     switch (command) {
       case 'id':
         result.textContent = 'uid=0(root) gid=0(root) groups=0(root)';
@@ -62,13 +69,16 @@
         result.textContent = 'Linux';
         break;
       case 'uname -a':
-        result.textContent = `Linux iancmd.dev 9.420.6-arch1-1 #1 SMP PREEMPT_DYNAMIC ${new Date()} x86_64 GNU/Linux`
+        result.textContent = `Linux iancmd.dev 9.420.6-arch1-1 #1 SMP PREEMPT_DYNAMIC ${new Date(Math.random() * 1e+13)} x86_64 GNU/Linux`
         break;
       case 'cat':
         result.textContent = '🐱'
         break;
       case 'dog':
         result.textContent = '🐶'
+        break;
+      case 'man':
+        result.textContent = '🧍‍♂️'
         break;
       case 'cat /etc/passwd':
         result.textContent = `root:x:0:0:root:/root:/bin/bash`;
@@ -77,6 +87,8 @@
         result.textContent = `root:!:0:0:0:0:::`;
         break;
       case 'ls':
+      case 'l':
+      case 'll':
         result.textContent = 'flag.txt';
         break;
       case 'cat /root/flag.txt':
@@ -92,10 +104,10 @@
       default:
         if (command.includes('/dev/tcp') || command.includes('/dev/udp'))
           result.textContent = 'Bad hacker :(';
-        else if (command.includes('alert'))
+        else if (xssList.some(x => command.includes(x)))
           alert(document.domain)
         else
-          result.textContent = `zsh: command not found: ${command}`;
+          result.textContent = `${getRandomChar()}sh: command not found: ${command}`;
     }
   })
 </script>
