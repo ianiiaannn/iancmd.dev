@@ -36,7 +36,7 @@
     try {
       document.getElementsByClassName('info')[0].style.display = 'none';
       document.getElementsByTagName('title')[0].innerText = 'R3AL ADMIN PANEL!!!!!';
-      if (xssList.some((x) => window.location.search)) {
+      if (xssList.some((x) => window.location.search.includes(x))) {
         alert(document.domain);
       }
     }
