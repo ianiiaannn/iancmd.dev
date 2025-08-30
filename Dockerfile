@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM debian
 
 RUN apt update && apt install wget build-essential ffmpeg git -y
 
