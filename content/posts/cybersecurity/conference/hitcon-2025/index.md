@@ -1,6 +1,6 @@
 +++
 Title = "HITCON 2025 心得"
-Date = "2025-08-30 23:11:50 +0800 CST"
+Date = "2025-08-30 23:50:00 +0800 CST"
 Description = ""
 menu = "main"
 +++
@@ -29,7 +29,24 @@ menu = "main"
 
 ### 只需一次 API 呼叫的致命一擊：從硬體逆向到突破保護機制的精準攻擊
 
-NiNi 分享在 Pwn2Own 比賽中嘗試攻擊 Hub 裝置的經驗，他們一路上各種撞牆、嘗試繞過最後控制機器，又因為開發商的奇怪更新機制差點拿不到分數。
-我目前沒還有去駭過硬體的經驗，目前手上剛好有把 Debug Spec 都寫清楚的 HITCON Badge 搞不好會拿來練習看看？目前手上剛好有一批沒用到的 SoC，正常使用下來感覺他很有趣但我連怎麼供電讓他開機都還沒搞清楚，那個裝置沒弄好還有可能把我電死。
+NiNi 分享在 Pwn2Own 比賽中嘗試攻擊一個 Hub 裝置的經驗，他們一路上各種撞牆、嘗試繞過最後控制機器，又因為開發商的奇怪裝置啟用機制與「恰巧」在 Pwn2Own 前數天發布的「數個安全更新」差點拿不到分數。
+
+我目前沒還有去駭過硬體的經驗，目前手上剛好有把 Debug Spec 都寫清楚的 HITCON Badge 搞不好會拿來練習看看？目前手上剛好有一批沒用到的 SoC，正常使用下來感覺他很有趣但我連怎麼供電讓他開機都還沒搞清楚，那個裝置沒弄好本體還有可能會把我電死。
+
+### 晚餐
+
+藍色拉麵 😋
+
+![ramen](ramen.webp)
 
 ## Day 2
+
+### 正確入侵 Linux 的方式：Zero Day、嶄新技巧與失敗的教訓
+
+由 Pumpkin 分享他在 Google VRP 中的 [kernelCTF](https://google.github.io/security-research/kernelctf/rules.html) 對 Linux Kernel 的 net/sched 的攻擊。這個子系統在 Linux Kernel 中是負責網路排程，若啟用 CONFIG_NET_SCHED 則會有大量的演算法可供選擇，造成攻擊面大增。
+
+### Phrack
+
+今年 HITCON 可以登記抽 Phrack #72 的實體版，而且只送不賣，這次很幸運的抽到了。
+
+![pharack](phrack.webp)
