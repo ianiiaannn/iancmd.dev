@@ -20,6 +20,19 @@ I use Arch btw.
 - [OffSec Web Expert (OSWE)](https://credentials.offsec.com/72ec9e9f-3e16-41b6-8ca1-cd4b80d30123) — April 2025
 - [iPas 中級資訊安全工程師](https://www.ipas.org.tw/ISE/AbilityIndex.aspx) — July 2024
 
+## Awards
+
+- HITCON CTF 2025 - 13th Place
+  - Participated as a member of 竹狐.
+  - Solved 2 challenges :)
+- AIS3 2025 - 進階資安攻防組 最佳專題
+  - Authored a web challenge that introduces players to prototype pollution vulnerability in template engines.
+- [HITCON CTF 2024 Final](https://ctf2024.hitcon.org/) - Taiwan Star
+  - Participated as a member of Starburst Beef Stir-Fried BambooFox.
+  - Mainly focused on the defensive side of challenge ad-fulu.
+- AEGIS CTF 2024 - 7th Place
+  - Participated as a member of 734m_N4M3_h3r3.
+
 ## Projects
 
 - [NPTU CSIE Gomoku V2](https://gomoku.csie2.nptu.edu.tw/)
@@ -54,14 +67,6 @@ I use Arch btw.
   - A personal blog built with [Hugo](https://gohugo.io/) and served by [Cloudflare Pages](https://pages.cloudflare.com/).
   - Features heavily customized theme using Go Templates based on [poison](https://github.com/lukeorth/poison) theme.
   - Source code available on [GitHub](https://github.com/ianiiaannn/iancmd.dev/tree/master/themes/poison).
-
-## Awards
-
-- [HITCON CTF 2024 Final](https://ctf2024.hitcon.org/) - Taiwan Star
-  - Participated as a member of Starburst Beef Stir-Fried BambooFox.
-  - Mainly focused on the defensive side of challenge ad-fulu.
-- AEGIS CTF 2024 - 7th Place
-  - Participated as a member of 734m_N4M3_h3r3.
 
 ## Career
 
