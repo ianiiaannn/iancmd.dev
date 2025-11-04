@@ -3,3 +3,11 @@
 /assets/jsconfig.json
 hugo_stats.json
 .hugo_build.lock
+node_modules
+.wrangler/
+.DS_Store
+bun.lock
+package.json
+package-lock.json
+/functions/worker-configuration.d.ts
+wrangler.toml

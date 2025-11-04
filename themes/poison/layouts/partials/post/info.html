@@ -13,6 +13,12 @@
     Last Modified: {{ .Lastmod.Format "January 2, 2006" }}
   </time>
   {{ end }}
+
+  |
+  <span class="post-date">
+    Views: <span id="click-counter">0</span>
+  </span>
+
   {{ if .Params.tags }}
   <ul class="tags">
     {{ range .Params.tags }}

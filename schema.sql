@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS click_counts (
+  path TEXT PRIMARY KEY,
+  count INTEGER NOT NULL DEFAULT 0
+);
