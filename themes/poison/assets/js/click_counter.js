@@ -1,10 +1,11 @@
 try {
-  const clickCounter = document.getElementById('click-counter')
-  const clickCount = await (
-    await fetch('/click-counter', {
+  ;(async () => {
+    const clickCounter = document.getElementById('click-counter')
+    const request = await fetch('/click-counter', {
       method: 'POST',
       body: window.location.pathname,
     })
-  ).text()
-  if (clickCounter != null) clickCounter.innerText = clickCount
+    const clickCount = await request.text()
+    if (clickCounter != null) clickCounter.innerText = clickCount
+  })()
 } catch (_) {}
