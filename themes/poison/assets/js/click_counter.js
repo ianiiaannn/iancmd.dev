@@ -6,6 +6,5 @@ try {
       body: window.location.pathname,
     })
   ).text()
-  if (clickCounter == null) return
-  clickCounter.innerText = clickCount
+  if (clickCounter != null) clickCounter.innerText = clickCount
 } catch (_) {}
