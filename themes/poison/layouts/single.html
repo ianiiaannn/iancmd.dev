@@ -1,6 +1,9 @@
 {{ define "main" -}}
 <div class="post">
   {{ partial "post/info.html" . }}
+  <span class="post-date">
+    Views: <span id="click-counter">0</span>
+  </span>
   {{ .Content }}
   {{ partial "post/navigation.html" . }}
   {{ partial "post/comments.html" . }}
