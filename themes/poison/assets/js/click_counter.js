@@ -6,6 +6,6 @@ try {
       body: window.location.pathname,
     })
     const clickCount = await request.text()
-    if (clickCounter != null) clickCounter.innerText = clickCount
+    if (clickCounter != null && request.ok) clickCounter.innerText = clickCount
   })()
 } catch (_) {}

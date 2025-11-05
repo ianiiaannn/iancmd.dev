@@ -20,8 +20,8 @@
 <link rel="sitemap" type="application/xml" title="Sitemap" href='{{ "sitemap.xml" | absURL }}' />
 
 <title itemprop="name">{{ .Scratch.Get "title" }}</title>
-{{ template "_internal/twitter_cards.html" . }}
-{{ template "_internal/schema.html" . }}
+{{ partial "twitter_cards.html" . }}
+{{ partial "schema.html" . }}
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{$.Site.Params.gtag}}"></script>
