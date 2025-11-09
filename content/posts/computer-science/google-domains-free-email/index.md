@@ -2,15 +2,10 @@
   "Title": "使用 Gmail SMTP 免費以自訂網域收發 Email",
   "Description": "",
   "Date": "2023-08-12 00:00:00.000000000 +0800 CST",
-  "Tags": [
-    "CS"
-  ],
-  "Categories": [
-    "CS"
-  ],
   "Menu": "main",
   "Alias": [
-    "/2022/06/blog-post.html"
+    "/2022/06/blog-post.html",
+    "/posts/cs/google-domains-free-email"
   ]
 }
 

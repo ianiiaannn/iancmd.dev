@@ -192,8 +192,7 @@ body>.wrapper {
   margin-top: 1em;
 }
 
-.post-date {
-  display: inline-block;
+.post-info-gray {
   color: var(--date-color);
 }
 

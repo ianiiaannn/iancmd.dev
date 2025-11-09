@@ -1,1 +1,1 @@
-hugo server --navigateToChanged
+hugo server --navigateToChanged --poll 500ms

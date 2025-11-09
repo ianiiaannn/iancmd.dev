@@ -319,11 +319,11 @@ img {
 }
 
 /* Meta data line below post title */
-.post-date {
+.post-info {
   display: block;
-  margin-top: -.5rem;
-  margin-bottom: 1rem;
-  color: #9a9a9a;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+  color: var(--date-color);
 }
 
 /* Related posts */
