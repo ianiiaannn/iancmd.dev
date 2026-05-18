@@ -12,7 +12,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"GitHub.copilot",
+				"GitHub.copilot-chat",
 				"DavidAnson.vscode-markdownlint",
 				"streetsidesoftware.code-spell-checker"
 			]

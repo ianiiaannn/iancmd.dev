@@ -3,7 +3,6 @@ Title = "About me"
 menu = "main"
 +++
 
-我叫 Ian，網路上的暱稱是 `ianiiaannn`，是一名擁有 OSWE 證照的 CTF 玩家，同時也有一些 Linux 系統管理和網頁應用程式開發的經驗。
 Hi, I'm Ian aka `ianiiaannn`, a web CTF player with OSWE. I also have some experience with Linux system administration and web application development.
 
 I'm currently a member of CTF team [734m_N4M3_h3r3](https://ctftime.org/team/301288) and [竹狐](https://ctftime.org/team/280959). I mainly focus on web, blockchain ~~and welcome~~ challenges.
@@ -21,17 +20,13 @@ I use Arch btw.
 - [OffSec Web Expert (OSWE)](https://credentials.offsec.com/72ec9e9f-3e16-41b6-8ca1-cd4b80d30123) — April 2025
 - [iPas 中級資訊安全工程師](https://www.ipas.org.tw/ISE/AbilityIndex.aspx) — July 2024
 
-## CTF Challenges
-
-- [TSCCTF 2026](/posts/cybersecurity/ctf/tscctf-2026)
-
-## CTF Competitions
+## Awards
 
 - HITCON Exhibition CTF 2025 - 1st Place
-  - Read [my writeup here](/posts/cybersecurity/ctf/hitcon-exhibition-ctf-2025).
+  - Read [my writeup here](/content/posts/cybersecurity/ctf/hitcon-exhibition-ctf-2025).
 - HITCON CTF 2025 - 13th Place
   - Participated as a member of 竹狐.
-- AIS3 2025 - 進階資安攻防組 最佳專題
+- AIS3 2025 - Advanced Attack and Defense - Best Project
   - Authored a web challenge that introduces players to prototype pollution vulnerability in template engines.
 - [HITCON CTF 2024 Final](https://ctf2024.hitcon.org/) - Taiwan Star
   - Participated as a member of Starburst Beef Stir-Fried BambooFox.

@@ -1,12 +1,26 @@
 {
   "baseURL": "https://iancmd.dev/",
-  "languageCode": "zh-Hant",
+  "languageCode": "zh-Hant-TW",
   "title": "ianiiaannn's Blog",
   "theme": "poison",
   "enableRobotsTXT": false,
   "timeZone": "Asia/Taipei",
-  "hasCJKLanguage": true,
   "enableGitInfo": true,
+  "defaultContentLanguage": "zh",
+  "languages": {
+    "zh": {
+      "weight": 1,
+      "languageCode": "zh-Hant-TW",
+      "languageName": "繁體中文",
+      "hasCJKLanguage": true
+    },
+    "en": {
+      "weight": 2,
+      "languageCode": "en-US",
+      "languageName": "English",
+      "hasCJKLanguage": false
+    }
+  },
   "markup": {
     "safeMode": true,
     "highlight": {

@@ -3,7 +3,15 @@
   {{ partial "post/info.html" . }}
   <span class="post-info" style="margin-top: -0.5rem">
     Views: <span id="click-counter">0</span>
+    {{if .IsTranslated}}
+    {{ range .Translations }}
+    |
+    <a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}"
+      style="align-self:self-end;">{{ T "LinkToOtherLanguage" }}</a>
+    {{ end }}
+    {{ end }}
   </span>
+
   {{ .Content }}
   {{ partial "post/navigation.html" . }}
   {{ partial "post/comments.html" . }}
