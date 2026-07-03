@@ -4,7 +4,7 @@ RUN apt update && apt install wget build-essential ffmpeg git -y
 
 RUN rm -rf /var/lib/apt/lists/*
 
-ENV HUGO_VERSION="0.151.2"
+ENV HUGO_VERSION="0.161.3"
 
 RUN arch=$(dpkg --print-architecture); \
     wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-${arch}.deb

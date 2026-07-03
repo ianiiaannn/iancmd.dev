@@ -1,23 +1,24 @@
 {
   "baseURL": "https://iancmd.dev/",
-  "languageCode": "zh-Hant-TW",
   "title": "ianiiaannn's Blog",
   "theme": "poison",
   "enableRobotsTXT": false,
   "timeZone": "Asia/Taipei",
   "enableGitInfo": true,
   "defaultContentLanguage": "zh",
+  "defaultContentLanguageInSubdir": false,
+  "enableEmoji": true,
   "languages": {
     "zh": {
       "weight": 1,
-      "languageCode": "zh-Hant-TW",
-      "languageName": "繁體中文",
+      "locale": "zh-Hant-TW",
+      "label": "繁體中文",
       "hasCJKLanguage": true
     },
     "en": {
       "weight": 2,
-      "languageCode": "en-US",
-      "languageName": "English",
+      "locale": "en-US",
+      "label": "English",
       "hasCJKLanguage": false
     }
   },
@@ -33,6 +34,27 @@
       "startLevel": 2,
       "endLevel": 4,
       "ordered": false
+    },
+    "goldmark": {
+      "extensions": {
+        "cjk": {
+          "eastAsianLineBreaks": true,
+          "eastAsianLineBreaksStyle": "simple",
+          "enable": true
+        },
+        "extras": {
+          "subscript": {
+            "enable": true
+          },
+          "superscript": {
+            "enable": true
+          },
+          "delete": {
+            "enable": true
+          }
+        },
+        "strikethrough": false
+      }
     }
   },
   "frontmatter": {
@@ -48,11 +70,15 @@
       "Date"
     ]
   },
+  "security": {
+    "allowContent": [
+      ".*"
+    ]
+  },
   "params": {
     "brand": "ianiiaannn's Blog",
     "brand_image": "/profile.webp",
     "dark_mode": true,
-    "utteranc": "ianiiaannn/iancmd.dev",
     "gtag": "G-QSNCX5Z8MF",
     "adsense": "ca-pub-3156472131130250",
     "github": "ianiiaannn",

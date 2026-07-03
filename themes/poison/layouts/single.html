@@ -6,7 +6,7 @@
     {{if .IsTranslated}}
     {{ range .Translations }}
     |
-    <a href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}"
+    <a href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}"
       style="align-self:self-end;">{{ T "LinkToOtherLanguage" }}</a>
     {{ end }}
     {{ end }}

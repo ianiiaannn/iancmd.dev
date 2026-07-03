@@ -1,26 +1,24 @@
 {
-  "title": "《名偵探皮卡丘 閃電回歸》：道出共生之理",
-  "description": "闊別多年以後，這次大叔皮卡丘帶著「靈光一閃」與謎團閃電回歸！",
-  "tags": [
-    "歐噴三遊戲評測室｜OGN"
-  ],
-  "categories": [
-    "歐噴三遊戲評測室｜OGN"
-  ],
-  "date": "2023-10-28 00:00:00.000000000 +0800 CST",
-  "menu": "main",
-  "brand_image": "/profile_openuko.gif",
-  "github": "openuko",
-  "github_url": "https://github.com/openuko"
+"title": "《名偵探皮卡丘 閃電回歸》：道出共生之理",
+"description": "闊別多年以後，這次大叔皮卡丘帶著「靈光一閃」與謎團閃電回歸！",
+"tags": [
+"歐噴三遊戲評測室｜OGN"
+],
+"categories": [
+"歐噴三遊戲評測室｜OGN"
+],
+"date": "2023-10-28 00:00:00.000000000 +0800 CST",
+"menu": "main",
+"brand_image": "/profile_openuko.gif",
+"github": "openuko",
+"github_url": "https://github.com/openuko"
 }
 
 ![闊別多年以後，這次大叔皮卡丘帶著「靈光一閃」與謎團閃電回歸！（來源：《閃電回歸》官網）](game-background.webp)
 
 闊別多年以後，這次大叔皮卡丘帶著「靈光一閃」與謎團閃電回歸！（來源：《閃電回歸》官網）
 
-<aside>
-⚠️ 本評測未深涉劇情與遊戲系統上的透露。惟本文中部分遊戲系統內容未於官方資訊中提及，需實際上手後才可得知，特此告知。
-</aside>
+> ⚠️ 本評測未深涉劇情與遊戲系統上的透露。惟本文中部分遊戲系統內容未於官方資訊中提及，需實際上手後才可得知，特此告知。
 
 ## 前言
 

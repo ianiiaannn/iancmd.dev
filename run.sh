@@ -1,1 +1,1 @@
-hugo server --navigateToChanged --poll 500ms
+hugo server --navigateToChanged --buildDrafts --buildExpired --buildFuture --poll 500ms
